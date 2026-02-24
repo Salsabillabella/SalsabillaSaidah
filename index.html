@@ -10,12 +10,14 @@
 
 <style>
 
+/* ---------- BACKGROUND ---------- */
+
 body{
   margin:0;
   font-family:'Segoe UI',sans-serif;
   background:linear-gradient(135deg,#ff758c,#ff7eb3,#6a11cb,#2575fc);
   background-size:400% 400%;
-  animation:gradientBG 12s ease infinite;
+  animation:gradientBG 14s ease infinite;
 }
 
 @keyframes gradientBG{
@@ -24,20 +26,19 @@ body{
   100%{background-position:0% 50%;}
 }
 
+/* ---------- CONTAINER ---------- */
+
 .container{
   max-width:950px;
   margin:40px auto;
-  background:white;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(10px);
   padding:40px;
-  border-radius:20px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.25);
-  animation:fadeIn 1s ease;
+  border-radius:22px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.25);
 }
 
-@keyframes fadeIn{
-  from{opacity:0; transform:translateY(20px);}
-  to{opacity:1; transform:translateY(0);}
-}
+/* ---------- HEADER ---------- */
 
 header{
   text-align:center;
@@ -49,8 +50,13 @@ header{
   border-radius:50%;
   object-fit:cover;
   border:6px solid white;
-  box-shadow:0 5px 20px rgba(0,0,0,0.2);
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
   margin-bottom:15px;
+  transition:0.4s;
+}
+
+.profile:hover{
+  transform:scale(1.05);
 }
 
 h1{
@@ -60,11 +66,13 @@ h1{
 
 .role{
   color:#666;
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
+/* ---------- SOCIAL ---------- */
+
 .social a{
-  margin:5px;
+  margin:6px;
   font-size:18px;
   color:white;
   background:#111;
@@ -78,22 +86,27 @@ h1{
   transform:translateY(-4px) scale(1.1);
 }
 
+/* ---------- LANGUAGE ---------- */
+
 .lang-btn{
   text-align:right;
+  margin-bottom:10px;
 }
 
 button{
   padding:8px 14px;
   border:none;
-  border-radius:6px;
+  border-radius:8px;
   background:#111;
   color:white;
   cursor:pointer;
   margin-left:5px;
 }
 
+/* ---------- SECTIONS ---------- */
+
 section{
-  margin-top:30px;
+  margin-top:40px;
 }
 
 h2{
@@ -101,16 +114,18 @@ h2{
   padding-left:10px;
 }
 
+/* ---------- SKILLS ---------- */
+
 .skills{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:12px;
+  gap:14px;
 }
 
 .skill{
   background:#f4f6f8;
-  padding:12px;
-  border-radius:10px;
+  padding:14px;
+  border-radius:12px;
   display:flex;
   align-items:center;
   gap:10px;
@@ -118,34 +133,39 @@ h2{
 }
 
 .skill:hover{
-  transform:translateY(-4px);
+  transform:translateY(-5px);
   background:#ecefff;
 }
+
+/* ---------- VIDEO ---------- */
 
 .video-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
+  gap:18px;
 }
 
 video{
   width:100%;
   border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
+
+/* ---------- BUTTON ---------- */
 
 .hire{
   text-align:center;
-  margin-top:30px;
+  margin-top:40px;
 }
 
 .hire a{
   background:#25D366;
   color:white;
-  padding:14px 24px;
-  border-radius:10px;
+  padding:15px 28px;
+  border-radius:12px;
   text-decoration:none;
   font-weight:bold;
-  font-size:16px;
+  font-size:17px;
   display:inline-block;
   transition:0.3s;
 }
@@ -154,8 +174,21 @@ video{
   transform:scale(1.05);
 }
 
+/* ---------- SCROLL ANIMATION ---------- */
+
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 1s cubic-bezier(.17,.67,.3,1);
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
 .lang{display:none;}
-.active{display:block;}
+.active-lang{display:block;}
 
 </style>
 </head>
@@ -169,12 +202,13 @@ video{
 <button onclick="switchLang('id')">ID</button>
 </div>
 
-<!-- ENGLISH -->
+<!-- ================= ENGLISH ================= -->
+
 <div id="en" class="lang">
 
-<header>
+<header class="reveal">
 
-<img src="Profile.jpg" class="profile">
+<img src="profile.jpg" class="profile">
 
 <h1>Salsabilla Saidah</h1>
 <div class="role">Quality Control • Sales Retail • Live Host</div>
@@ -188,7 +222,7 @@ video{
 
 </header>
 
-<section>
+<section class="reveal">
 <h2>Professional Summary</h2>
 <p>
 Energetic and detail-oriented professional with experience in Quality Control,
@@ -197,7 +231,7 @@ Target-driven and adaptable in fast-paced environments.
 </p>
 </section>
 
-<section>
+<section class="reveal">
 <h2>Core Skills</h2>
 
 <div class="skills">
@@ -214,12 +248,13 @@ Target-driven and adaptable in fast-paced environments.
 
 </div>
 
-<!-- INDONESIA -->
+<!-- ================= INDONESIA ================= -->
+
 <div id="id" class="lang">
 
-<header>
+<header class="reveal">
 
-<img src="Profile.jpg" class="profile">
+<img src="profile.jpg" class="profile">
 
 <h1>Salsabilla Saidah</h1>
 <div class="role">Quality Control • Sales Retail • Live Host</div>
@@ -233,7 +268,7 @@ Target-driven and adaptable in fast-paced environments.
 
 </header>
 
-<section>
+<section class="reveal">
 <h2>Ringkasan Profesional</h2>
 <p>
 Pribadi yang enerjik dan teliti dengan pengalaman sebagai Quality Control,
@@ -242,7 +277,7 @@ Mampu bekerja dengan target dan tekanan.
 </p>
 </section>
 
-<section>
+<section class="reveal">
 <h2>Keahlian</h2>
 
 <div class="skills">
@@ -259,24 +294,24 @@ Mampu bekerja dengan target dan tekanan.
 
 </div>
 
-<section>
+<section class="reveal">
 <h2>Live Hosting & Showcase</h2>
 
 <div class="video-grid">
 
 <video controls>
-<source src="Video1.mp4" type="video/mp4">
+<source src="video1.mp4" type="video/mp4">
 </video>
 
 <video controls>
-<source src="Video2.mp4" type="video/mp4">
+<source src="video2.mp4" type="video/mp4">
 </video>
 
 </div>
 
 </section>
 
-<div class="hire">
+<div class="hire reveal">
 <a href="https://wa.me/6282299235522?text=Hello%20Salsabilla,%20I%20am%20interested%20in%20your%20services.">
 <i class="fab fa-whatsapp"></i> Hire Me / Contact WhatsApp
 </a>
@@ -286,10 +321,12 @@ Mampu bekerja dengan target dan tekanan.
 
 <script>
 
+/* ---------- LANGUAGE ---------- */
+
 function switchLang(lang){
-document.getElementById('en').classList.remove('active');
-document.getElementById('id').classList.remove('active');
-document.getElementById(lang).classList.add('active');
+document.getElementById('en').style.display='none';
+document.getElementById('id').style.display='none';
+document.getElementById(lang).style.display='block';
 }
 
 const userLang=navigator.language||navigator.userLanguage;
@@ -299,6 +336,25 @@ switchLang('id');
 }else{
 switchLang('en');
 }
+
+/* ---------- SCROLL REVEAL ---------- */
+
+const reveals=document.querySelectorAll(".reveal");
+
+function revealOnScroll(){
+const windowHeight=window.innerHeight;
+
+reveals.forEach(el=>{
+const elementTop=el.getBoundingClientRect().top;
+
+if(elementTop < windowHeight - 80){
+el.classList.add("active");
+}
+});
+}
+
+window.addEventListener("scroll",revealOnScroll);
+revealOnScroll();
 
 </script>
 
