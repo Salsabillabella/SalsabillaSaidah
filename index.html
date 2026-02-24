@@ -10,169 +10,152 @@
 
 <style>
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  background: linear-gradient(135deg, #1f1f2e, #2b5876, #4e4376);
-  color: #333;
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(135deg,#ff758c,#ff7eb3,#6a11cb,#2575fc);
+  background-size:400% 400%;
+  animation:gradientBG 12s ease infinite;
 }
 
-/* CONTAINER */
-
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  animation: fadeIn 1s ease;
+@keyframes gradientBG{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
 }
 
-@keyframes fadeIn {
-  from {opacity:0; transform:translateY(20px);}
-  to {opacity:1; transform:translateY(0);}
+.container{
+  max-width:950px;
+  margin:40px auto;
+  background:white;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.25);
+  animation:fadeIn 1s ease;
 }
 
-/* HEADER */
-
-header {
-  text-align: center;
-  margin-bottom: 25px;
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
-.profile-pic {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid #eee;
-  margin-bottom: 15px;
+header{
+  text-align:center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 28px;
+.profile{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  object-fit:cover;
+  border:6px solid white;
+  box-shadow:0 5px 20px rgba(0,0,0,0.2);
+  margin-bottom:15px;
 }
 
-header p {
-  color: #666;
-  margin-top: 5px;
+h1{
+  margin:0;
+  font-size:30px;
 }
 
-/* SOCIAL ICONS */
-
-.social {
-  margin-top: 15px;
+.role{
+  color:#666;
+  margin-bottom:10px;
 }
 
-.social a {
-  color: white;
-  margin: 0 6px;
-  font-size: 20px;
-  background: #111;
-  padding: 10px;
-  border-radius: 50%;
-  display: inline-block;
-  transition: 0.3s;
+.social a{
+  margin:5px;
+  font-size:18px;
+  color:white;
+  background:#111;
+  padding:10px;
+  border-radius:50%;
+  display:inline-block;
+  transition:0.3s;
 }
 
-.social a:hover {
-  background: #555;
-  transform: translateY(-3px);
+.social a:hover{
+  transform:translateY(-4px) scale(1.1);
 }
 
-/* LANGUAGE BUTTON */
-
-.lang-btn {
-  text-align: right;
-  margin-bottom: 15px;
+.lang-btn{
+  text-align:right;
 }
 
-button {
-  padding: 8px 14px;
-  border: none;
-  background: #111;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-left: 5px;
-  transition: 0.3s;
+button{
+  padding:8px 14px;
+  border:none;
+  border-radius:6px;
+  background:#111;
+  color:white;
+  cursor:pointer;
+  margin-left:5px;
 }
 
-button:hover {
-  background: #444;
+section{
+  margin-top:30px;
 }
 
-/* SECTION */
-
-h2 {
-  border-bottom: 2px solid #eee;
-  padding-bottom: 5px;
-  margin-top: 30px;
+h2{
+  border-left:5px solid #6a11cb;
+  padding-left:10px;
 }
 
-/* SKILLS */
-
-.skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 10px;
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:12px;
 }
 
-.skill-item {
-  background: #f4f6f8;
-  padding: 10px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: 0.3s;
+.skill{
+  background:#f4f6f8;
+  padding:12px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  transition:0.3s;
 }
 
-.skill-item:hover {
-  transform: translateY(-3px);
-  background: #e9ecef;
+.skill:hover{
+  transform:translateY(-4px);
+  background:#ecefff;
 }
 
-/* VIDEO */
-
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
 }
 
-video {
-  width: 100%;
-  border-radius: 10px;
+video{
+  width:100%;
+  border-radius:12px;
 }
 
-/* WHATSAPP BUTTON */
-
-.hire-btn {
-  text-align: center;
-  margin-top: 30px;
+.hire{
+  text-align:center;
+  margin-top:30px;
 }
 
-.hire-btn a {
-  background: #25D366;
-  color: white;
-  padding: 12px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+.hire a{
+  background:#25D366;
+  color:white;
+  padding:14px 24px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:16px;
+  display:inline-block;
+  transition:0.3s;
 }
 
-.hire-btn a:hover {
-  background: #1ebe5d;
+.hire a:hover{
+  transform:scale(1.05);
 }
 
-/* LANGUAGE */
-
-.lang { display:none; }
-.lang.active { display:block; }
+.lang{display:none;}
+.active{display:block;}
 
 </style>
 </head>
@@ -182,48 +165,51 @@ video {
 <div class="container">
 
 <div class="lang-btn">
-  <button onclick="switchLang('en')">EN</button>
-  <button onclick="switchLang('id')">ID</button>
+<button onclick="switchLang('en')">EN</button>
+<button onclick="switchLang('id')">ID</button>
 </div>
 
 <!-- ENGLISH -->
 <div id="en" class="lang">
 
 <header>
-  <img src="profile.jpg" class="profile-pic">
-  <h1>Salsabilla Saidah</h1>
-  <p>Quality Control • Sales Retail • Live Host</p>
 
-  <div class="social">
-    <a href="https://wa.me/6282299235522" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://instagram.com/belasyh_" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://tiktok.com/@beellssyh" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="mailto:bellasalsabillas02@gmail.com"><i class="fa fa-envelope"></i></a>
-  </div>
+<img src="Profile.jpg" class="profile">
+
+<h1>Salsabilla Saidah</h1>
+<div class="role">Quality Control • Sales Retail • Live Host</div>
+
+<div class="social">
+<a href="https://wa.me/6282299235522"><i class="fab fa-whatsapp"></i></a>
+<a href="https://instagram.com/belasyh_"><i class="fab fa-instagram"></i></a>
+<a href="https://tiktok.com/@beellssyh"><i class="fab fa-tiktok"></i></a>
+<a href="mailto:bellasalsabillas02@gmail.com"><i class="fa fa-envelope"></i></a>
+</div>
 
 </header>
 
 <section>
-  <h2>Professional Summary</h2>
-  <p>
-    Energetic and detail-oriented Quality Control and Retail Sales professional
-    with strong experience in sales reporting, inventory control,
-    customer service, and live hosting for TikTok and Shopee.
-  </p>
+<h2>Professional Summary</h2>
+<p>
+Energetic and detail-oriented professional with experience in Quality Control,
+Retail Sales, customer service, and live hosting for TikTok & Shopee.
+Target-driven and adaptable in fast-paced environments.
+</p>
 </section>
 
 <section>
-  <h2>Core Skills</h2>
+<h2>Core Skills</h2>
 
-  <div class="skills">
-    <div class="skill-item"><i class="fa fa-chart-line"></i> Sales & Negotiation</div>
-    <div class="skill-item"><i class="fa fa-file-excel"></i> Microsoft Excel</div>
-    <div class="skill-item"><i class="fa fa-box"></i> Inventory Control</div>
-    <div class="skill-item"><i class="fa fa-users"></i> Customer Service</div>
-    <div class="skill-item"><i class="fa fa-video"></i> Live Hosting</div>
-    <div class="skill-item"><i class="fa fa-cash-register"></i> Cashier</div>
-  </div>
+<div class="skills">
 
+<div class="skill"><i class="fa fa-chart-line"></i> Sales & Negotiation</div>
+<div class="skill"><i class="fa fa-file-excel"></i> Microsoft Excel</div>
+<div class="skill"><i class="fa fa-box"></i> Inventory Control</div>
+<div class="skill"><i class="fa fa-users"></i> Customer Service</div>
+<div class="skill"><i class="fa fa-video"></i> Live Hosting</div>
+<div class="skill"><i class="fa fa-cash-register"></i> Cashier</div>
+
+</div>
 </section>
 
 </div>
@@ -232,83 +218,86 @@ video {
 <div id="id" class="lang">
 
 <header>
-  <img src="profile.jpg" class="profile-pic">
-  <h1>Salsabilla Saidah</h1>
-  <p>Quality Control • Sales Retail • Live Host</p>
 
-  <div class="social">
-    <a href="https://wa.me/6282299235522" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://instagram.com/belasyh_" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://tiktok.com/@beellssyh" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="mailto:bellasalsabillas02@gmail.com"><i class="fa fa-envelope"></i></a>
-  </div>
+<img src="Profile.jpg" class="profile">
+
+<h1>Salsabilla Saidah</h1>
+<div class="role">Quality Control • Sales Retail • Live Host</div>
+
+<div class="social">
+<a href="https://wa.me/6282299235522"><i class="fab fa-whatsapp"></i></a>
+<a href="https://instagram.com/belasyh_"><i class="fab fa-instagram"></i></a>
+<a href="https://tiktok.com/@beellssyh"><i class="fab fa-tiktok"></i></a>
+<a href="mailto:bellasalsabillas02@gmail.com"><i class="fa fa-envelope"></i></a>
+</div>
 
 </header>
 
 <section>
-  <h2>Ringkasan Profesional</h2>
-  <p>
-    Pribadi yang enerjik dan teliti dengan pengalaman sebagai Quality Control
-    dan Sales Retail. Terbiasa membuat laporan penjualan, mengelola stok,
-    melayani customer, serta menjadi host live TikTok dan Shopee.
-  </p>
+<h2>Ringkasan Profesional</h2>
+<p>
+Pribadi yang enerjik dan teliti dengan pengalaman sebagai Quality Control,
+Sales Retail, pelayanan customer, serta host live TikTok & Shopee.
+Mampu bekerja dengan target dan tekanan.
+</p>
 </section>
 
 <section>
-  <h2>Keahlian</h2>
+<h2>Keahlian</h2>
 
-  <div class="skills">
-    <div class="skill-item"><i class="fa fa-chart-line"></i> Penjualan & Negosiasi</div>
-    <div class="skill-item"><i class="fa fa-file-excel"></i> Microsoft Excel</div>
-    <div class="skill-item"><i class="fa fa-box"></i> Kontrol Stok</div>
-    <div class="skill-item"><i class="fa fa-users"></i> Customer Service</div>
-    <div class="skill-item"><i class="fa fa-video"></i> Live Hosting</div>
-    <div class="skill-item"><i class="fa fa-cash-register"></i> Kasir</div>
-  </div>
+<div class="skills">
 
+<div class="skill"><i class="fa fa-chart-line"></i> Penjualan & Negosiasi</div>
+<div class="skill"><i class="fa fa-file-excel"></i> Microsoft Excel</div>
+<div class="skill"><i class="fa fa-box"></i> Kontrol Stok</div>
+<div class="skill"><i class="fa fa-users"></i> Customer Service</div>
+<div class="skill"><i class="fa fa-video"></i> Live Hosting</div>
+<div class="skill"><i class="fa fa-cash-register"></i> Kasir</div>
+
+</div>
 </section>
 
 </div>
 
 <section>
-  <h2>Live Hosting & Product Showcase</h2>
+<h2>Live Hosting & Showcase</h2>
 
-  <div class="video-grid">
-    <video controls>
-      <source src="video1.mp4" type="video/mp4">
-    </video>
+<div class="video-grid">
 
-    <video controls>
-      <source src="video2.mp4" type="video/mp4">
-    </video>
-  </div>
+<video controls>
+<source src="Video1.mp4" type="video/mp4">
+</video>
+
+<video controls>
+<source src="Video2.mp4" type="video/mp4">
+</video>
+
+</div>
 
 </section>
 
-<div class="hire-btn">
-  <a href="https://wa.me/6282299235522?text=Hello%20Salsabilla,%20I%20am%20interested%20in%20your%20services." target="_blank">
-    <i class="fab fa-whatsapp"></i> Hire Me / Contact WhatsApp
-  </a>
+<div class="hire">
+<a href="https://wa.me/6282299235522?text=Hello%20Salsabilla,%20I%20am%20interested%20in%20your%20services.">
+<i class="fab fa-whatsapp"></i> Hire Me / Contact WhatsApp
+</a>
 </div>
 
 </div>
 
 <script>
 
-/* SWITCH LANGUAGE */
-function switchLang(lang) {
-  document.getElementById('en').classList.remove('active');
-  document.getElementById('id').classList.remove('active');
-  document.getElementById(lang).classList.add('active');
+function switchLang(lang){
+document.getElementById('en').classList.remove('active');
+document.getElementById('id').classList.remove('active');
+document.getElementById(lang).classList.add('active');
 }
 
-/* AUTO DETECT LANGUAGE */
-const userLang = navigator.language || navigator.userLanguage;
+const userLang=navigator.language||navigator.userLanguage;
 
-if (userLang.startsWith('id')) {
-  switchLang('id');
-} else {
-  switchLang('en');
+if(userLang.startsWith('id')){
+switchLang('id');
+}else{
+switchLang('en');
 }
 
 </script>
